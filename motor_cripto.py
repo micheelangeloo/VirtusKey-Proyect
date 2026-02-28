@@ -33,5 +33,4 @@ def desencriptar(paquete: bytes, contrasena: str) -> bytes:
 
     llave = crear_llave(contrasena, sal)
     motor_aes = AESGCM(llave)
-
     return motor_aes.decrypt(numero_unico, texto_oculto, None)
